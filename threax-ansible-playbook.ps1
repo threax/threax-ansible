@@ -4,7 +4,7 @@ $scriptPath = Split-Path $script:MyInvocation.MyCommand.Path
 . $scriptPath\setupcommand.ps1
 
 if($command){
-    $containerCommand += "  --entrypoint `"ansible`" threax/ansible $command"
+    $containerCommand += "  --entrypoint `"ansible-playbook`" threax/ansible $command"
 }
 else{
     $containerCommand += " threax/ansible"
