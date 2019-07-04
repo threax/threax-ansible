@@ -8,8 +8,11 @@ RUN apt-get update &&\
     apt-get install -y software-properties-common &&\
     apt-add-repository --yes --update ppa:ansible/ansible &&\
     apt-get install -y ansible &&\
+    apt-get install -y python-pip &&\
     apt-get autoremove &&\
     apt-get clean
+
+RUN pip install "pywinrm>=0.3.0"
 
 ENV ANSIBLE_GATHERING smart
 ENV ANSIBLE_HOST_KEY_CHECKING false
