@@ -1,13 +1,13 @@
 $command = "$args"
 
 $containerCommand = "docker run -it --rm"
-$containerCommand += " -v $pwd/ansible/hosts:/etc/ansible/hosts"
+$containerCommand += " -v $pwd\ansible\hosts:/etc/ansible/hosts"
 
 if($command){
-    $containerCommand += " threax/ansible $command"
+    $containerCommand += "  --entrypoint `"ansible`" threax/ansible $command"
 }
 else{
-    $containerCommand += " --entrypoint `"bin/bash`" threax/ansible"
+    $containerCommand += " threax/ansible"
 }
 
 Write-Host "$containerCommand" 

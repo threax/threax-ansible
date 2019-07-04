@@ -7,5 +7,3 @@ RUN apt-get update &&\
     apt-get install -y ansible &&\
     apt-get autoremove &&\
     apt-get clean
-
-ENTRYPOINT [ "ansible" ]
