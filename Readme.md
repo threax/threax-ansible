@@ -24,3 +24,6 @@ Run threax-ansible-playbook.ps1 to run playbook commands, for example:
 ```
 threax-ansible-playbook.ps1 --version
 ```
+
+## Build Image
+Build the image by running ./build.ps1.
