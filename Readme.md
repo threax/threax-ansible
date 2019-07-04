@@ -2,6 +2,10 @@
 This project wraps ansible in a docker container. It also provides a powershell script to run the container and execute ansible commands.
 
 ## Setup
+### SSH Keys
+Make sure you have ssh keys setup in c:/users/user/.ssh called id_rsa.pub and id_rsa
+
+### Create Directory
 Create a directory somewhere that will act as the project directory for ansible.
 
 Create a directory called ansible with the following files in it:
