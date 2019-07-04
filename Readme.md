@@ -11,6 +11,8 @@ Create a directory somewhere that will act as the project directory for ansible.
 Create a directory called ansible with the following files in it:
 1. hosts - Create your [inventory](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html) here.
 
+Create a directory called playbooks to hold the playbook files.
+
 ## Running Ad-Hoc Commands
 Run threax-ansible.ps1 to run ad-hoc ansible commands. Running it with no args will put you into the container's bash shell.
 
