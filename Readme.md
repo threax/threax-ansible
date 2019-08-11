@@ -23,6 +23,16 @@ For example run the following to list all hosts
 threax-ansible.ps1 all --list-hosts
 ```
 
+Or to do a linux ping
+```
+threax-ansible/threax-ansible.ps1 all -m ping --ask-pass
+```
+
+Or a Windows ping
+```
+threax-ansible/threax-ansible.ps1 all -m win_ping --ask-pass
+```
+
 ## Running Playbook Commands
 Run threax-ansible-playbook.ps1 to run playbook commands, for example:
 ```
