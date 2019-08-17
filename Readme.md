@@ -39,6 +39,11 @@ Run threax-ansible-playbook.ps1 to run playbook commands, for example:
 threax-ansible-playbook.ps1 --version
 ```
 
+Or run an actual playbook, the playbook.yaml file will be in the playbooks directory you setup above:
+```
+threax-ansible-playbook.ps1 playbook.yaml
+```
+
 ## Using Ansible Vault
 The ansible vault is also supported although vi is not included in the image. Therefore you can really only use the encrypt and decrypt commands to work with files. Put the file you want to encrypt/decrypt into the playbook folder and run the following commands:
 To encrypt:
