@@ -11,7 +11,7 @@ Create a directory somewhere that will act as the project directory for ansible.
 Create a directory called ansible with the following files in it:
 1. hosts - Create your [inventory](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html) here.
 
-Create a directory called playbooks to hold the playbook files. This will be mounted in the container under `/ansible/files` which is the workdir.
+Create a directory called playbooks to hold the playbook files. This will be mounted in the container under `/ansible/playbooks` which is the workdir.
 
 Create a directory called files to hold any additional files. This is optional and will be mounted in the container under `/ansible/files`. Use that as the base path in any playbook files you want to use with this container.
 
@@ -48,12 +48,12 @@ threax-ansible-playbook.ps1 playbook.yaml
 The ansible vault is also supported although vi is not included in the image. Therefore you can really only use the encrypt and decrypt commands to work with files. Put the file you want to encrypt/decrypt into the playbook folder and run the following commands:
 To encrypt:
 ```
-threax-ansible-vault.ps1 encrypt foo.yml
+threax-ansible-vault.ps1 encrypt /ansible/files/config/foo.yml
 ```
 
 To decrypt:
 ```
-threax-ansible-vault.ps1 decrypt foo.yml
+threax-ansible-vault.ps1 decrypt /ansible/files/config/foo.yml
 ```
 
 ## Build Image
