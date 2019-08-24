@@ -14,6 +14,8 @@ if (Test-Path $env:USERPROFILE\.ssh\id_rsa -PathType Leaf)
     $containerCommand += " -v $env:USERPROFILE\.ssh\id_rsa.pub:/root/.ssh_in/id_rsa.pub"
 }
 
+$containerCommand += " --mount source=threaxansibletemp,target=/ansible-temp"
+
 if($command){
     $containerCommand += " threax/ansible $ansibleExe $command"
 }
