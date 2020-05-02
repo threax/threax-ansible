@@ -1,7 +1,7 @@
 # Dockerfile to install ansible
 # Some of this is taken from https://ruleoftech.com/2017/dockerizing-all-the-things-running-ansible-inside-docker-container
 
-FROM ubuntu:latest
+FROM ubuntu:18.04
 
 # Install ansible
 RUN apt-get update &&\
