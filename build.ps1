@@ -1,3 +1,3 @@
 $scriptPath = Split-Path $script:MyInvocation.MyCommand.Path
 
-docker build $scriptPath -t threax/ansible
+docker build --pull $scriptPath -t threax/ansible
